@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Taccuino</title>
+    <style>
+        html{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title has-text-centered mt-3">Note Taker</h1>
+    
+    <!-- BLOCCO INPUT NOTE onkeyup="EnableDisable(this)" -->
+    <div class="container">
+        <div class="field">
+            <label class="label is-medium">Nota:</label>
+        
+            <div class="control">
+                <input type="text" name="input-nota" id="input-nota" class="input is-medium" placeholder="Scrivi qualcosa..." oninput="maxChars(this)">
+            </div>
+        </div>
+        <div class="field">
+            <div class="block has-text-centered">
+                <button class="button is-primary mt-2 is-small" id="bottone-add" nome="bottone-add" disabled>AGGIUNGI</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOCCO DISPLAY NOTE IMMESSE -->
+    <div class="container mt-3 is-flex is-flex-direction-row is-justify-content-flex-start is-flex-wrap-wrap" id="container">
+
+    </div>
+</body>
+<script src="taccuinoJS.js"></script>
+</html>
